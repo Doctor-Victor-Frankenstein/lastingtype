@@ -1,0 +1,69 @@
+{
+  "manifest_version": 2,
+  "name": "LastingType: Own your content.",
+  "version": "0.0.0",
+  "short_name": "LastingType",
+  "description": "Store your blog posts in the blockchain and let them last forever with LastingType.",
+  "icons": {
+    "16": "assets/logo.png",
+    "32": "assets/logo.png",
+    "48": "assets/logo.png",
+    "128": "assets/logo.png"
+  },
+  "homepage_url": "https://lastingtype.com",
+  "__firefox__browser_specific_settings": {
+    "gecko": {
+      "id": "hello@lastingtype.com",
+      "strict_min_version": "52.0"
+    }
+  },
+  "__chrome|firefox__author": "LastingType",
+  "__opera__developer": {
+    "name": "LastingType"
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/logo.png",
+      "32": "assets/logo.png",
+      "48": "assets/logo.png",
+      "128": "assets/logo.png"
+    },
+    "default_title": "LastingType: Own your content.",
+    "__chrome|opera__chrome_style": false,
+    "__firefox__browser_style": false
+  },
+  "background": {
+    "__chrome|opera__persistent": false,
+    "scripts": ["js/background.bundle.js"]
+  },
+  "content_scripts": [
+    {
+      "all_frames": false,
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["js/content.bundle.js"]
+    }
+  ],
+  "__chrome__minimum_chrome_version": "49",
+  "__opera__minimum_opera_version": "36",
+  "__chrome|opera__permissions": [
+    "activeTab",
+    "storage",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "__firefox__permissions": [
+    "activeTab",
+    "storage",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "__chrome|opera__options_page": "options.html",
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true,
+    "__chrome__chrome_style": false,
+    "__firefox|opera__browser_style": false
+  }
+}

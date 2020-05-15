@@ -1,0 +1,96 @@
+{
+  "env": {
+    "browser": true
+  },
+  "extends": [
+    "prettier/react",
+    "./jsx-a11y.js",
+    "./react-hooks.js",
+    "./non-rules.js",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "./base.js",
+    "./prettier.js",
+    "./import.js",
+    "plugin:import/typescript"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": ["react", "@typescript-eslint"],
+  "rules": {
+    "camelcase": "off",
+    "no-unused-vars": "off",
+    "no-console": "off",
+    "no-extend-native": "off",
+    "no-use-before-define": "off",
+    "@typescript-eslint/camelcase": [
+      "error",
+      {
+        "allow": ["api_key", "api_plan"]
+      }
+    ],
+    "@typescript-eslint/class-name-casing": "error",
+    "@typescript-eslint/no-inferrable-types": "error",
+    "@typescript-eslint/no-use-before-define": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "res|next|^err|^_",
+        "ignoreRestSiblings": true,
+        "caughtErrors": "all"
+      }
+    ],
+    "@typescript-eslint/type-annotation-spacing": "error",
+    "jsx-a11y/label-has-associated-control": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/button-has-type": "error",
+    "react/destructuring-assignment": ["error", "always"],
+    "react/display-name": "warn",
+    "react/forbid-prop-types": "off",
+    "react/jsx-filename-extension": [
+      "warn",
+      {
+        "extensions": [".js", ".jsx", ".tsx"]
+      }
+    ],
+    "react/no-array-index-key": "error",
+    "react/no-danger": "error",
+    "react/no-danger-with-children": "error",
+    "react/no-deprecated": "error",
+    "react/no-direct-mutation-state": "error",
+    "react/no-multi-comp": "off",
+    "react/no-render-return-value": "error",
+    "react/no-this-in-sfc": "error",
+    "react/no-typos": "error",
+    "react/no-unescaped-entities": "error",
+    "react/no-set-state": "error",
+    "react/no-unsafe": "error",
+    "react/prefer-stateless-function": "off",
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/require-default-props": "off",
+    "react/require-render-return": "error",
+    "react/self-closing-comp": [
+      "error",
+      {
+        "component": true,
+        "html": true
+      }
+    ],
+    "react/state-in-constructor": "error"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".ts", ".js", ".json", ".jsx", ".tsx"]
+      }
+    },
+    "react": {
+      "version": "detect"
+    }
+  }
+}

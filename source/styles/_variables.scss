@@ -1,0 +1,28 @@
+// **** colors ****
+$black: #444;
+$light-black: #0f0f0f;
+$grey-white: #f3f3f3;
+$grey: #888;
+$white: #ffffff;
+
+// **** fonts ****
+$font-nunito: "Nunito", sans-serif;
+
+// font weights
+$thin: 100;
+$exlight: 200;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+$exbold: 800;
+$exblack: 900;
+
+// **** other variables ****
+.d-none {
+  display: none !important;
+}
+
+$CopyIconBg: hsl(144, 100%, 96%);
+$StatsTotalUnderline: hsl(200, 35%, 65%);
